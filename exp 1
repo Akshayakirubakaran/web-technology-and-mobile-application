@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Event Registration</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Embedded CSS -->
+    <style>
+        body {
+            background-color: #f4f8ff;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: navy;
+        }
+
+        .nav {
+            text-align: center;
+        }
+
+        .nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .form-box {
+            text-align: center;
+        }
+
+        .map-box {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .map-box img {
+            border: 2px solid #333;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🎓 College Event Registration Portal</h1>
+
+<!-- Inline CSS Example -->
+<p style="text-align:center; color: green; font-weight: bold;">
+    Register for upcoming college events and explore campus locations.
+</p>
+
+<hr>
+
+<!-- Navigation Links -->
+<div class="nav">
+    <a href="#register">Register</a> |
+    <a href="#map">Campus Map</a> |
+    <a href="https://www.google.com" target="_blank">External Link</a>
+</div>
+
+<hr>
+
+<!-- Registration Section -->
+<h2 id="register">📋 Event Registration Form</h2>
+
+<form class="form-box">
+    Name: <input type="text" required><br><br>
+    Email: <input type="email" required><br><br>
+
+    Event:
+    <select>
+        <option>Tech Fest</option>
+        <option>Cultural Fest</option>
+        <option>Sports Meet</option>
+    </select>
+    <br><br>
+
+    <button type="submit">Register</button>
+</form>
+
+<hr>
+
+<!-- Campus Map with Hotspots -->
+<h2 id="map">🗺 Campus Map with Hotspots</h2>
+
+<div class="map-box">
+    <img src="campus-map.jpg" usemap="#campusmap" alt="Campus Map">
+
+    <map name="campusmap">
+        <area shape="rect" coords="40,40,180,150"
+              href="https://en.wikipedia.org/wiki/Library"
+              target="_blank"
+              alt="Library"
+              title="Library">
+
+        <area shape="rect" coords="220,60,380,170"
+              href="https://en.wikipedia.org/wiki/Auditorium"
+              target="_blank"
+              alt="Auditorium"
+              title="Auditorium">
+
+        <area shape="rect" coords="120,200,280,330"
+              href="https://en.wikipedia.org/wiki/Cafeteria"
+              target="_blank"
+              alt="Cafeteria"
+              title="Cafeteria">
+    </map>
+</div>
+
+<hr>
+
+<!-- Event Preview Frame -->
+<h2>📺 Event Preview Frame</h2>
+
+<div style="text-align:center;">
+    <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/ysz5S6PUM-U?rel=0"
+        allowfullscreen>
+    </iframe>
+</div>
+
+<hr>
+
+<footer>
+    <p style="text-align:center;">© 2026 College Event Portal</p>
+</footer>
+
+</body>
+</html>
