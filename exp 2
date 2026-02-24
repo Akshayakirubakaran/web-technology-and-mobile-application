@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Elegant Registration Form</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #eef2f3, #dfe9f3);
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .form-box {
+            width: 420px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: 500;
+            color: #34495e;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border-radius: 6px;
+            border: 1px solid #ccd6dd;
+            font-size: 14px;
+            transition: 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #5dade2;
+            box-shadow: 0 0 5px rgba(93, 173, 226, 0.4);
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 12px;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #1a252f;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+    </style>
+
+    <script>
+        function validateForm() {
+
+            var fname = document.getElementById("fname").value.trim();
+            var lname = document.getElementById("lname").value.trim();
+            var password = document.getElementById("password").value;
+            var email = document.getElementById("email").value.trim();
+            var mobile = document.getElementById("mobile").value.trim();
+            var address = document.getElementById("address").value.trim();
+
+            var namePattern = /^[A-Za-z]+$/;
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var mobilePattern = /^[0-9]{10}$/;
+
+            if (!namePattern.test(fname)) {
+                alert("First Name must contain only alphabets.");
+                return false;
+            }
+
+            if (fname.length < 6) {
+                alert("First Name must be at least 6 characters long.");
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return false;
+            }
+
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid Email ID (example: name@domain.com).");
+                return false;
+            }
+
+            if (!mobilePattern.test(mobile)) {
+                alert("Mobile number must contain exactly 10 digits.");
+                return false;
+            }
+
+            if (lname === "") {
+                alert("Last Name cannot be empty.");
+                return false;
+            }
+
+            if (address === "") {
+                alert("Address cannot be empty.");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+<h1>Registration Form</h1>
+
+<div class="form-box">
+    <form onsubmit="return validateForm()">
+
+        <label>First Name</label>
+        <input type="text" id="fname">
+
+        <label>Last Name</label>
+        <input type="text" id="lname">
+
+        <label>Password</label>
+        <input type="password" id="password">
+
+        <label>E-mail</label>
+        <input type="text" id="email">
+
+        <label>Mobile Number</label>
+        <input type="text" id="mobile">
+
+        <label>Address</label>
+        <textarea id="address" rows="3"></textarea>
+
+        <button type="submit">Submit</button>
+
+    </form>
+</div>
+
+<footer>
+    © 2026 Registration Portal
+</footer>
+
+</body>
+</html>
